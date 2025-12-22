@@ -1,0 +1,26 @@
+flowchart TB
+  %% Subprocess - Compute DoE and DoE Uncertainty (L2)
+
+  subgraph CS["Computation Service"]
+    S1["Load validated submissions<br/>(frozen versions)"]
+    S2["Select measurand point(s)<br/>/ dataset scope"]
+    S3["Select reference method<br/>(KCRV / CRV / consensus)"]
+    S4["Compute Reference Value x_ref<br/>and u(x_ref)"]
+    S5["Determine correlation model scope"]
+    X{"Correlation available?"}
+    S6["Load correlation matrix<br/>or pairwise correlations"]
+    S7["Assume correlation = 0<br/>(or declared default)"]
+
+    L1["For each participant i:<br/>compute Δᵢ = xᵢ − x_ref"]
+    L2["Compute u(Δᵢ)<br/>using selected model"]
+    N1["Note: u(Δᵢ) may depend on<br/>u(xᵢ), u(x_ref), cov(xᵢ,x_ref)<br/>and participant contribution to KCRV"]
+    L3["Optionally compute coverage metric<br/>(En / z) using CMC U or rules"]
+
+    O1["Produce DoE dataset<br/>(Δᵢ, u(Δᵢ), metadata)"]
+    O2["Produce traceability record:<br/>input versions, algorithm id + params,<br/>correlation assumptions, timestamp,<br/>responsible party"]
+  end
+
+  S1 --> S2 --> S3 --> S4 --> S5 --> X
+  X -->|Yes| S6 --> L1
+  X -->|No| S7 --> L1
+  L1 --> L2 --> N1 --> L3 --> O1 --> O2

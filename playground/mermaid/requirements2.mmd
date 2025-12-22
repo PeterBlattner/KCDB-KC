@@ -1,0 +1,33 @@
+requirementDiagram
+
+  functionalRequirement fr1 {
+    id: FR1
+    text: Process measurements
+    risk: medium
+    verifymethod: test
+  }
+
+  performanceRequirement pr1 {
+    id: PR1
+    text: Response time less than 2 s
+    risk: high
+    verifymethod: analysis
+  }
+
+  interfaceRequirement ir1 {
+    id: IR1
+    text: Provide REST API
+    risk: low
+    verifymethod: inspection
+  }
+
+  designConstraint dc1 {
+    id: DC1
+    text: Use HTTPS only
+    risk: low
+    verifymethod: inspection
+  }
+
+  fr1 - contains -> pr1
+  fr1 - contains -> ir1
+  fr1 - contains -> dc1

@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant U as User
+    participant UI as Web UI
+    participant API as API Server
+    participant DB as Database
+
+    U->>UI: Submit form
+    UI->>API: POST /submit
+
+    alt Not authenticated
+        API-->>UI: 401 Unauthorized
+        UI-->>U: Ask to log in
+    else Authenticated
+        API->>DB: Store data
+        DB-->>API: OK
+
+        loop Each item
+            API->>DB: Validate item
+            DB-->>API: Valid
+        end
+
+        API-->>UI: 200 Success
+        UI-->>U: Confirmation
+    end

@@ -1,0 +1,12 @@
+flowchart LR
+  %% KC Comparison Digital Reporting - Process Landscape (L0)
+
+  P1["Initiate & Plan<br/>(protocol, participants, measurands)"]
+  P2["Collect Submissions<br/>(validate, iterate)"]
+  P3["Compute & Review<br/>(KCRV, DoE, correlations)"]
+  P4["Publish & Register<br/>(KCDB package, versioning)"]
+  P5["CMC Validation<br/>(evidence linking, checks)"]
+  P6["Change & Correction<br/>(errata, updates)"]
+
+  P1 --> P2 --> P3 --> P4 --> P5
+  P4 --> P6 --> P4

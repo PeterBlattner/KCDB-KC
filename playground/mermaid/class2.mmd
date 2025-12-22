@@ -1,0 +1,28 @@
+classDiagram
+  class Experiment {
+    +string name
+    +run()
+  }
+  class Instrument {
+    +string serial
+    +calibrate()
+  }
+  class Sensor {
+    +string id
+    +read()
+  }
+  class Measurement {
+    +float value
+    +float uncertainty
+    +timestamp time
+  }
+  class Repository {
+    +save(m: Measurement)
+    +query()
+  }
+
+  Experiment "1" o-- "1..*" Instrument : uses
+  Instrument "1" o-- "1..*" Sensor : contains
+  Sensor --> "0..*" Measurement : generates
+  Repository ..> Measurement : stores
+  Experiment ..> Repository : persists to

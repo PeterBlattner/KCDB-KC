@@ -1,0 +1,48 @@
+erDiagram
+  MEMBER ||--o{ MEMBERSHIP : holds
+  MEMBERSHIP }o--|| MEMBERSHIP_TYPE : is_of
+  MEMBER ||--o{ PUBLICATION : authors
+  PUBLICATION ||--o{ CITATION : has
+  PUBLICATION ||--o{ EVENT_PRESENTATION : presented_as
+  EVENT ||--o{ EVENT_PRESENTATION : includes
+
+  MEMBER {
+    int memberId
+    string fullName
+    string email
+  }
+
+  MEMBERSHIP {
+    int membershipId
+    date startDate
+    date endDate
+    string status
+  }
+
+  MEMBERSHIP_TYPE {
+    int typeId
+    string name
+    float annualFee
+  }
+
+  PUBLICATION {
+    int publId
+    string title
+    int year
+  }
+
+  CITATION {
+    int citationId
+    string doi
+  }
+
+  EVENT {
+    int eventId
+    string name
+    date startDate
+  }
+
+  EVENT_PRESENTATION {
+    int presId
+    string format
+  }

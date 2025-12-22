@@ -1,0 +1,52 @@
+sequenceDiagram
+    autonumber
+    participant Pilot as Pilot Lab
+    participant Sec as BIPM / KCDB Secretariat
+    participant Part as Participant (NMI/DI)
+    participant Subm as Submission Service
+    participant Comp as Computation Service
+    participant Rev as CC Reviewers / WG
+    participant KCDB as KCDB System
+    participant CMC as CMC Validation Service
+
+    Pilot->>Sec: Draft protocol & request registration
+    Sec->>KCDB: Register comparison (ID, metadata)
+    Sec-->>Pilot: Provide comparisonId & schema
+    Sec-->>Part: Publish protocol + submission schema
+
+    Part->>Subm: Submit results + uncertainty package
+    Subm->>Subm: Validate syntax & vocabularies
+
+    alt Submission valid
+        Subm-->>Part: Acknowledge acceptance
+        Subm->>KCDB: Store submission (versioned)
+    else Submission invalid
+        Subm-->>Part: Return validation errors
+        Part->>Subm: Correct & resubmit
+        Subm->>Subm: Re-validate
+        Subm->>KCDB: Store corrected submission
+    end
+
+    KCDB-->>Comp: Provide frozen dataset
+    Comp->>Comp: Compute KCRV / CRV
+    Comp->>Comp: Compute DoE & DoE uncertainty
+    Comp->>KCDB: Store provisional results
+    Comp-->>Rev: Provide dataset + computation report
+
+    Rev->>Rev: Review results & methods
+    alt Accepted
+        Rev-->>Comp: Approval
+    else Revision requested
+        Rev-->>Comp: Issues & revision request
+        Comp->>Comp: Recompute with adjustments
+        Comp-->>Rev: Updated results
+        Rev->>Rev: Re-review
+    end
+
+    Comp->>KCDB: Publish final results package
+    Sec->>KCDB: Register as official KCDB record (version)
+
+    KCDB-->>CMC: Provide DoE evidence
+    CMC->>CMC: Link DoEs to CMC claims
+    CMC->>CMC: Perform validation checks (En, rules)
+    CMC->>KCDB: Store validation outcomes & evidence trail

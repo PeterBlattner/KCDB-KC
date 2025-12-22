@@ -1,0 +1,11 @@
+C4Container
+  Person(user, "User")
+  System_Boundary(s1, "Platform") {
+    Container(web, "Web App", "React")
+    Container(api, "API", "Python")
+  }
+  ContainerDb(db, "DB", "PostgreSQL")
+
+  Rel(user, web, "uses")
+  Rel(web, api, "calls")
+  Rel(api, db, "reads/writes")

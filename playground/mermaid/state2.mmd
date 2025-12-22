@@ -1,0 +1,19 @@
+stateDiagram-v2
+  [*] --> Idle
+
+  Idle --> Acquiring : start
+  Acquiring --> Processing : dataReady
+  Processing --> Reporting : reportReady
+  Reporting --> Idle : done
+
+  Acquiring --> Error : timeout
+  Processing --> Error : exception
+  Error --> Idle : reset
+
+  state Processing {
+    [*] --> Normalize
+    Normalize --> Fit : ok
+    Fit --> Validate : fitDone
+    Validate --> [*] : valid
+    Validate --> Normalize : invalid
+  }

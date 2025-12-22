@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph C[Customer]
+        C1[Place order]
+        C2[Receive confirmation]
+    end
+
+    subgraph W[Web Shop]
+        W1[Validate order]
+        W2[Create order]
+        W3[Send confirmation]
+    end
+
+    subgraph P[Payment Service]
+        P1[Authorize payment]
+    end
+
+    subgraph L[Logistics]
+        L1[Prepare shipment]
+    end
+
+    C1 --> W1 --> W2 --> P1
+    P1 --> W3 --> L1 --> C2

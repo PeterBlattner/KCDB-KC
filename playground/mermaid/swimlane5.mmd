@@ -1,0 +1,19 @@
+flowchart LR
+    subgraph R1[Researcher]
+        A[Draft proposal]
+        B[Submit]
+    end
+
+    subgraph R2[Grant Office]
+        C[Formal check]
+        D[Forward to reviewers]
+    end
+
+    subgraph R3[Review Board]
+        E[Evaluate]
+        F{Approve?}
+    end
+
+    A --> B --> C --> D --> E --> F
+    F -- Yes --> B
+    F -- No --> A

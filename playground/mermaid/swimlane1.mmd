@@ -1,0 +1,16 @@
+flowchart LR
+    subgraph U[User]
+        U1[Enter request]
+        U2[Review result]
+    end
+
+    subgraph A[Application]
+        A1[Validate input]
+        A2[Process request]
+    end
+
+    subgraph S[Service]
+        S1[Fetch data]
+    end
+
+    U1 --> A1 --> A2 --> S1 --> A2 --> U2

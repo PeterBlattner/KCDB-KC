@@ -1,0 +1,14 @@
+flowchart LR
+    subgraph U[User]
+        U1[Request]
+    end
+
+    subgraph S[System]
+        S1[Process]
+        S2[Respond]
+    end
+
+    U1 --> S1 --> S2 --> U1
+
+    style U fill:#f3f8ff,stroke:#1e88e5,stroke-width:1px
+    style S fill:#f1f8e9,stroke:#2e7d32,stroke-width:1px

@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant U as User
+    participant A as App
+    participant S as Service
+
+    U->>A: Enter data
+    A->>S: Validate(data)
+    S-->>A: OK
+    A->>S: Process(data)
+    S-->>A: Result
+    A-->>U: Show result

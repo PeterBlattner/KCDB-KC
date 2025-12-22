@@ -1,0 +1,15 @@
+flowchart TD
+    subgraph U[User]
+        U1[Submit form]
+    end
+
+    subgraph A[Application]
+        A1[Validate]
+        A2[Process]
+    end
+
+    subgraph D[Database]
+        D1[Store data]
+    end
+
+    U1 --> A1 --> A2 --> D1

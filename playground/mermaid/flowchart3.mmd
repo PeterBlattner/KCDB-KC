@@ -1,0 +1,21 @@
+flowchart TD
+    A[Start] --> B[Receive request]
+    B --> C{Authenticated?}
+
+    C -- No --> D[Reject request]
+    D --> Z[End]
+
+    C -- Yes --> E{Request type?}
+
+    E -- Query --> F[Fetch data]
+    F --> H[Format response]
+
+    E -- Update --> G[Validate payload]
+    G --> I{Valid?}
+    I -- No --> J[Return error]
+    I -- Yes --> K[Write to database]
+
+    H --> Y[Send response]
+    J --> Y
+    K --> Y
+    Y --> Z[End]

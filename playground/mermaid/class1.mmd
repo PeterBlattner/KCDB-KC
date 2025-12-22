@@ -1,0 +1,11 @@
+classDiagram
+  class Sensor {
+    +string id
+    +read()
+  }
+  class Measurement {
+    +float value
+    +float uncertainty
+  }
+
+  Sensor --> Measurement : produces

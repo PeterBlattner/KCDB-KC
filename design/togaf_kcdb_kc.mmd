@@ -1,0 +1,25 @@
+flowchart TB
+  %% TOGAF ADM - Enterprise Architecture Process (tailored to KCDB comparison reporting & CMC validation)
+
+  A0["Preliminary<br/>Establish Architecture Capability<br/>- Sponsorship & governance<br/>- Architecture principles<br/>- Architecture repository setup"] --> A1
+
+  A1["Phase A: Architecture Vision<br/>- Scope & objectives (KC reporting + CMC validation)<br/>- Stakeholders & concerns<br/>- High-level target state"] --> B
+
+  B["Phase B: Business Architecture<br/>- Comparison lifecycle processes<br/>- Roles (Pilot, Participants, CC reviewers, KCDB)<br/>- Information flows & decision gates"] --> C
+
+  C["Phase C: Data Architecture (Core)<br/>Baseline:<br/>- Inventory current templates/formats<br/>Target:<br/>- Canonical conceptual model + glossary<br/>- Core + extensions strategy<br/>- DoE + uncertainty + correlation concepts"] --> D
+
+  D["Phase D: Application Architecture<br/>- Submission tooling & validation service<br/>- Computation service (KCRV/DoE)<br/>- KCDB integration/API<br/>- CMC validation service & evidence linking"] --> E
+
+  E["Phase E: Opportunities & Solutions<br/>- Building blocks (schema registry, validators, converters)<br/>- Reference implementations<br/>- Pilot deployments (selected CCs/domains)"] --> F
+
+  F["Phase F: Migration Planning<br/>- Coexistence with legacy submissions<br/>- Phased rollout by CC/comparison type<br/>- Historical data strategy"] --> G
+
+  G["Phase G: Implementation Governance<br/>- Conformance reviews (schemas, APIs, tools)<br/>- Extension approval process<br/>- Release gating & quality criteria"] --> H
+
+  H["Phase H: Architecture Change Management<br/>- Change requests (new domains, methods, vocabularies)<br/>- Versioning/deprecation policy<br/>- Continuous improvement cycle"] --> A1
+
+  %% Key deliverables (optional callouts)
+  C --> Cx["Key deliverables (Phase C)<br/>- PlantUML conceptual/logical model<br/>- JSON Schema(s) + examples<br/>- Vocabulary/code lists<br/>- Traceability rules (DoE uncertainty, correlation)"]
+  B --> Bx["Key deliverables (Phase B)<br/>- BPMN/Activity/Sequence process models<br/>- RACI + review workflow<br/>- Data object inventory"]
+  D --> Dx["Key deliverables (Phase D)<br/>- API contracts & validation pipeline<br/>- Toolchain architecture<br/>- Integration patterns (KCDB, registries)"]

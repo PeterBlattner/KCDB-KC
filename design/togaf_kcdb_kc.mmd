@@ -1,25 +1,114 @@
-flowchart TB
-  %% TOGAF ADM - Enterprise Architecture Process (tailored to KCDB comparison reporting & CMC validation)
 
-  A0["Preliminary<br/>Establish Architecture Capability<br/>- Sponsorship & governance<br/>- Architecture principles<br/>- Architecture repository setup"] --> A1
+  flowchart TB
+  %% TOGAF ADM tailored to KCDB Reference Data Architecture
+  %% Reformatted for readability
 
-  A1["Phase A: Architecture Vision<br/>- Scope & objectives (KC reporting + CMC validation)<br/>- Stakeholders & concerns<br/>- High-level target state"] --> B
+  A0["<b>Preliminary Phased – Establish Architecture Capability</b>
+  <div align='left'>
+     • BIPM sponsorship & mandate
+     • Architecture WG & governance
+     • Principles (core+extensions, DoE-first, provenance)
+     • Architecture repository
+  </div>"]
+  
+  --> A1
 
-  B["Phase B: Business Architecture<br/>- Comparison lifecycle processes<br/>- Roles (Pilot, Participants, CC reviewers, KCDB)<br/>- Information flows & decision gates"] --> C
+  A1["<b>Phase A – Architecture Vision</b>
+  <div align='left'>
+     • Drivers: harmonised KC reporting & CMC evidence
+     • Scope: KC/SC, results, CRV/KCRV, DoE, uncertainty
+     • Stakeholders & concerns
+     • Vision: canonical digital KC backbone
+     </div>"]
+  --> B
 
-  C["Phase C: Data Architecture (Core)<br/>Baseline:<br/>- Inventory current templates/formats<br/>Target:<br/>- Canonical conceptual model + glossary<br/>- Core + extensions strategy<br/>- DoE + uncertainty + correlation concepts"] --> D
+  B["<b>Phase B – Business Architecture</b>
+  <div align='left'>
+     • KC/SC lifecycle processes
+     • Roles: Pilot, CC WGs, reviewers, KCDB team, NMIs
+     • Information flows & decision gates</div>"]
+  --> C
 
-  D["Phase D: Application Architecture<br/>- Submission tooling & validation service<br/>- Computation service (KCRV/DoE)<br/>- KCDB integration/API<br/>- CMC validation service & evidence linking"] --> E
+  C["<b>Phase C – Data Architecture (Core)</b>
+  <div align='left'>
+     Baseline:
+     • Inventory of formats & practices
+     • Observations & hypotheses
+     Target:
+     • Canonical core model
+     • DoE & ReferenceValue as first-class
+     • Measurand complexity (scalar/vector/complex/parameterised)
+     • Core + CC extensions
+     • Versioning, provenance, linking</div>"]
+  --> D
 
-  E["Phase E: Opportunities & Solutions<br/>- Building blocks (schema registry, validators, converters)<br/>- Reference implementations<br/>- Pilot deployments (selected CCs/domains)"] --> F
+  D["<b>Phase D – Application Architecture</b>
+  <div align='left'>
+     • Submission APIs & tools
+     • Validation services
+     • KCRV/DoE computation engines
+     • KCDB backend & APIs
+     • CMC validation services</div>"]
+  --> E
 
-  F["Phase F: Migration Planning<br/>- Coexistence with legacy submissions<br/>- Phased rollout by CC/comparison type<br/>- Historical data strategy"] --> G
+  E["<b>Phase E – Opportunities & Solutions</b>
+  <div align='left'>
+     • Schema registry & validators
+     • Reference implementations
+     • Conversion tools
+     • Pilot CC solutions</div>"]
+  --> F
 
-  G["Phase G: Implementation Governance<br/>- Conformance reviews (schemas, APIs, tools)<br/>- Extension approval process<br/>- Release gating & quality criteria"] --> H
+  F["<b>Phase F – Migration Planning</b>
+  <div align='left'>
+     • Pilot domains & comparisons
+     • Phased rollout
+     • Legacy coexistence
+     • Historical data strategy</div>"]
+  --> G
 
-  H["Phase H: Architecture Change Management<br/>- Change requests (new domains, methods, vocabularies)<br/>- Versioning/deprecation policy<br/>- Continuous improvement cycle"] --> A1
+  G["<b>Phase G – Implementation Governance</b>
+  <div align='left'>
+     • Conformance reviews
+     • Extension approval process
+     • Version & release control
+     • Enforce principles</div>"]
+  --> H
 
-  %% Key deliverables (optional callouts)
-  C --> Cx["Key deliverables (Phase C)<br/>- PlantUML conceptual/logical model<br/>- JSON Schema(s) + examples<br/>- Vocabulary/code lists<br/>- Traceability rules (DoE uncertainty, correlation)"]
-  B --> Bx["Key deliverables (Phase B)<br/>- BPMN/Activity/Sequence process models<br/>- RACI + review workflow<br/>- Data object inventory"]
-  D --> Dx["Key deliverables (Phase D)<br/>- API contracts & validation pipeline<br/>- Toolchain architecture<br/>- Integration patterns (KCDB, registries)"]
+  H["<b>Phase H – Architecture Change Management</b>
+  <div align='left'>
+     • New domains & methods
+     • New uncertainty/correlation models
+     • Digital SI evolution
+     • Change & deprecation workflow</div>"]
+  --> A1
+
+
+  %% Key deliverables (separate callouts)
+
+  B --> Bx["<b>Key Deliverables (Phase B)</b> 
+  <div align='left'>
+     • End-to-end process models (Activity / BPMN / Sequence)
+     • Actor & role model (Pilot, CC, KCDB, NMI, reviewers)
+     • Information flow maps
+     • Data object inventory (baseline inputs/outputs)</div>"]
+
+  C --> Cx["<b>Key Deliverables (Phase C)</b> 
+  <div align='left'>
+     • Baseline inventory of observations & hypotheses (INV-xx)
+     • Data requirements catalogue (DR-xx)
+     • Canonical conceptual & logical model (PlantUML)
+     • Core + extension design strategy
+     • Uncertainty & DoE semantics model
+     • ReferenceValue & provenance model
+     • Controlled vocabularies & glossary
+     • Baseline → target mapping</div>"]
+
+  D --> Dx["<b>Key Deliverables (Phase D)</b> 
+  <div align='left'>
+     • Target application/service landscape
+     • API contracts aligned to canonical schema
+     • Submission & validation pipeline design
+     • Computation service interfaces (KCRV/DoE/U(DoE))
+     • KCDB integration patterns
+     • CMC validation service interfaces</div>"]

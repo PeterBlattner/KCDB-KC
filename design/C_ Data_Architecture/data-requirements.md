@@ -164,7 +164,7 @@ including a clear designation of the DoE type and definition used.
 
 **DR-15 — DoE uncertainty statement**  
 The model shall support an uncertainty statement associated with each DoE
-(e.g., u(DoE), U(DoE), k, coverage probability), including cases where only partial
+(e.g., u(DoE), U(DoE), U_neg(DOE), U_pos(DOE), k, coverage probability), including cases where only partial
 information is available.  
 **Traceability:** INV-08, INV-29, INV-30
 
@@ -265,7 +265,7 @@ The following hypotheses require validation with stakeholders and/or corpus evid
 - H-02: All KCs have one or more DoEs. (INV-04)
 - H-03: All DoEs have associated U(DoE). (INV-08)
 - H-04: All U(DoE) are reported at 95% confidence. (INV-29)
-- H-05: All DoE uncertainty distributions are symmetrical. (INV-30)
+- H-05: Some DoE uncertainty distributions are asymmetrical. (INV-30)
 - H-06: All KC/SC have unique identifiers. (INV-33)
 - H-07: Some KC measurands correspond directly to CMC measurands. (INV-11)
 - H-08: Some KC/SC conditions match CMC conditions. (INV-17)

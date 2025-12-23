@@ -56,7 +56,7 @@ Each item is assigned a stable identifier (**INV-nn**) and grouped by category.
 | INV-27 | Observation | Some KC/SC calculate artefact-"class"-based CRVs only | Reference values (KCRV/CRV) and variants | AFRIMETS.AUV.V-K5 |
 | INV-28 | Observation | Some KC/SC report DOEs for more than one external parameter | Degrees of Equivalence and coverage metrics | APMP.EM-K12 |
 | INV-29 | Hypothesis | All U(DOE)s are reported at a confidence level of 95% | Degrees of Equivalence and coverage metrics | |
-| INV-30 | Hypothesis | All uncertainty distributions of DOEs are symmetrical | Degrees of Equivalence and coverage metrics | |
+| INV-30 | Observation | Some uncertainty distributions of DOEs are asymetrical (U_pos <> U_neg) | Degrees of Equivalence and coverage metrics | |
 | INV-31 | Observation | Not all KCs have DOE graphs and tables published directly at KCDB | Publication and availability | CCEM.RF-K5.c.CL |
 | INV-32 | Observation | Some KC reports are not available through the KCDB webpage | Publication and availability | CCPR-K3.a |
 | INV-33 | Hypothesis | All KC/SC have a unique identifier (e.g. "CCPR-K3.a") | Publication and availability | |

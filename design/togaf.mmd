@@ -1,0 +1,32 @@
+flowchart TB
+  %% TOGAF ADM (generic) with key deliverable callouts
+  %% Mermaid 10.x / VS Code friendly
+
+  A0["Preliminary Phase<br/>Establish Architecture Capability<br/><br/>- Architecture charter &amp; mandate<br/>- Architecture principles<br/>- Governance (roles, review boards)<br/>- Architecture repository &amp; tooling"] --> A1
+
+  A1["Phase A – Architecture Vision<br/><br/>- Drivers, objectives, scope<br/>- Stakeholders &amp; concerns<br/>- High-level target picture"] --> B
+
+  B["Phase B – Business Architecture<br/><br/>- Baseline &amp; target processes<br/>- Roles &amp; responsibilities<br/>- Business requirements &amp; gaps"] --> C
+
+  C["Phase C – Information Systems Architectures<br/><br/>Data Architecture + Application Architecture<br/>- Baseline &amp; target models<br/>- Information flows &amp; interfaces<br/>- Gap analysis"] --> D
+
+  D["Phase D – Technology Architecture<br/><br/>- Baseline &amp; target technology/platform<br/>- Standards &amp; constraints<br/>- Technology gap analysis"] --> E
+
+  E["Phase E – Opportunities &amp; Solutions<br/><br/>- Solution options &amp; building blocks<br/>- Work packages &amp; dependencies<br/>- High-level roadmap"] --> F
+
+  F["Phase F – Migration Planning<br/><br/>- Transition architectures<br/>- Prioritised roadmap<br/>- Risk &amp; mitigation"] --> G
+
+  G["Phase G – Implementation Governance<br/><br/>- Architecture contracts<br/>- Compliance reviews<br/>- Issue &amp; change control"] --> H
+
+  H["Phase H – Architecture Change Management<br/><br/>- Monitor drivers &amp; changes<br/>- Assess impacts<br/>- Trigger new ADM cycles"] --> A1
+
+
+  %% Key deliverables (separate callouts)
+
+  A1 --> Ax["Key Deliverables (Phase A)<br/><br/>- Architecture Vision document<br/>- Stakeholder map &amp; concerns<br/>- High-level requirements<br/>- List of concerns"]
+
+  B --> Bx["Key Deliverables (Phase B)<br/><br/>- Business process models (e.g., BPMN / Activity)<br/>- Organisation/role model (RACI optional)<br/>- Business requirements catalogue<br/>- Baseline vs target gap analysis"]
+
+  C --> Cx["Key Deliverables (Phase C)<br/><br/>Data Architecture:<br/>- Conceptual &amp; logical data models<br/>- Data requirements &amp; principles<br/>- Data dictionary / glossary<br/><br/>Application Architecture:<br/>- Application portfolio &amp; interactions<br/>- Interface/service definitions<br/>- Application gap analysis"]
+
+  D --> Dx["Key Deliverables (Phase D)<br/><br/>- Target technology architecture<br/>- Platform/infrastructure standards<br/>- Technology building blocks<br/>- Technology gap analysis"]

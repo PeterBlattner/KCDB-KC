@@ -68,7 +68,8 @@ The architecture shall:
 | CMC Review Bodies | Transparent DoE-based evidence |
 | IT Providers | Stable schemas and APIs |
 
-see stakeholders_concerns.md  for the detailed analysis of concerns.
+see *stakeholders_concerns.md*  for the detailed analysis of concerns.
+ 
 ---
 
 ## 6. High-Level Requirements

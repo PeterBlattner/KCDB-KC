@@ -4,7 +4,7 @@
 **Version:** 0.1  
 **Status:** Draft  
 **Date:** 2025-12-22  
-**Owner:** BIPM / KCDB Architecture Working Group  
+**Owner:** BIPM / FORUM-MD-WG-CC / FORUM-MD-TG-MS ?
 
 ---
 
@@ -52,7 +52,8 @@ It applies to all KC/SC domains coordinated through BIPM and the CCs.
 
 ### 3.1 Executive Sponsorship
 The initiative is sponsored by:
-- **BIPM Management**, in coordination with Consultative Committees.
+
+- **BIPM**, in coordination with FORUM-MD-WG-CC.
 
 ### 3.2 Mandate
 The architecture capability is mandated to:
@@ -152,6 +153,7 @@ The architecture shall support reuse for CMC validation and future digital servi
 - Phases G and H provide long-term governance and change management.
 
 Supporting methods:
+
 - UML/PlantUML for conceptual and logical modeling.
 - JSON Schema for physical models.
 - Markdown for specifications.

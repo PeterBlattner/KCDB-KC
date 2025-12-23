@@ -39,6 +39,7 @@ The KCDB problem space exhibits all characteristics for which TOGAF is intended:
 - Continuous evolution driven by new methods, domains, and Digital SI.
 
 Baseline analysis shows high variability in:
+
 - reference values (KCRV, CRV, artefact-based, class-based),
 - DoE definitions and coverage metrics (u(DoE), En, limits),
 - measurand complexity (scalar, vector, complex, parameterised),
@@ -58,6 +59,7 @@ This is therefore the design of a:
 **Purpose:** Set scope, authority, and governance.
 
 **KCDB context:**
+
 - Sponsorship by BIPM leadership.
 - Establish a permanent architecture working group.
 - Position this as the **BIPM reference data architecture** for comparisons.
@@ -70,6 +72,7 @@ This is therefore the design of a:
   - Open standards and sustainability.
 
 **Deliverables:**
+
 - Architecture charter.  
 - Architecture principles.  
 - Governance structure and review boards.
@@ -81,6 +84,7 @@ This is therefore the design of a:
 **Purpose:** Why and what success looks like.
 
 **KCDB context:**
+
 - Business drivers:
   - Improve consistency and quality of KC reporting.
   - Enable DoE-based CMC validation.
@@ -93,6 +97,7 @@ This is therefore the design of a:
 - Identify stakeholders and enumerate concerns.
 
 **Deliverables:**
+
 - Architecture Vision document.  
 - Stakeholder map and concerns.  
 - Vision statement:  
@@ -105,6 +110,7 @@ This is therefore the design of a:
 **Purpose:** Align with real processes and decisions.
 
 **KCDB context – key processes:**
+
 - Plan and register comparisons.
 - Collect and validate participant submissions.
 - Compute reference values and DoEs.
@@ -113,11 +119,13 @@ This is therefore the design of a:
 - Use results for CMC validation.
 
 **Focus:**
+
 - Roles (Pilot, CC WGs, reviewers, KCDB team, NMIs/DIs).
 - Information flows and decision gates.
 
 **Deliverables:**
-- Business process models.  
+
+- Business process models (BPMN).  
 - Business functions and actors.  
 - Information flow diagrams.
 
@@ -128,6 +136,7 @@ This is therefore the design of a:
 **Purpose:** Define baseline and target data architecture.
 
 #### Baseline
+
 - Inventory of existing formats and practices.
 - Observed variability in:
   - DoE definitions and uncertainty reporting,
@@ -137,6 +146,7 @@ This is therefore the design of a:
   - availability and publication status.
 
 #### Target
+
 - Canonical conceptual and logical model.
 - **DoE and reference values as first-class objects.**
 - Explicit uncertainty and correlation representation.
@@ -146,12 +156,14 @@ This is therefore the design of a:
 - Versioning and provenance metadata.
 
 This is where:
+
 - conceptual model extraction,
 - PlantUML modeling,
 - and JSON Schema derivation  
 are anchored.
 
 **Deliverables:**
+
 - Baseline findings and inventory.  
 - Target conceptual & logical data model.  
 - Data principles and requirements.  
@@ -164,6 +176,7 @@ are anchored.
 **Purpose:** Define how systems realise the data architecture.
 
 **KCDB context:**
+
 - Submission portals and APIs.
 - Validation services.
 - KCRV/DoE computation engines.
@@ -172,11 +185,13 @@ are anchored.
 - Reporting and visualisation tools.
 
 **Ensure:**
+
 - All applications consume and produce canonical data.
 - APIs are schema-driven.
 - Provenance flows end-to-end.
 
 **Deliverables:**
+
 - Application portfolio.  
 - Interaction diagrams.  
 - API contracts aligned to JSON Schema.
@@ -188,6 +203,7 @@ are anchored.
 **Purpose:** Shape concrete solution building blocks.
 
 **KCDB context:**
+
 - Schema registry and versioning service.
 - Reference validators and converters.
 - Example libraries and test cases.
@@ -195,6 +211,7 @@ are anchored.
 - Toolchain prototypes.
 
 **Deliverables:**
+
 - Solution concept.  
 - Work packages.  
 - High-level roadmap.
@@ -206,12 +223,14 @@ are anchored.
 **Purpose:** Plan adoption.
 
 **KCDB context:**
+
 - Pilot domains and comparisons.
 - Coexistence with legacy submissions.
 - Strategy for historical data (where feasible).
 - Incremental rollout.
 
 **Deliverables:**
+
 - Migration roadmap.  
 - Risks and mitigations.
 
@@ -222,12 +241,14 @@ are anchored.
 **Purpose:** Ensure conformance.
 
 **KCDB context:**
+
 - Review of schemas, tools, and extensions.
 - Approval of domain extensions.
 - Version control and release gates.
 - Conformance criteria.
 
 **Deliverables:**
+
 - Governance process.  
 - Conformance checklists.  
 - Review boards.
@@ -239,12 +260,14 @@ are anchored.
 **Purpose:** Manage evolution.
 
 **KCDB context:**
+
 - New domains and measurands.
 - New uncertainty and correlation models.
 - Digital SI evolution.
 - New reporting and validation needs.
 
 **Deliverables:**
+
 - Change workflow.  
 - Versioning and deprecation policy.
 

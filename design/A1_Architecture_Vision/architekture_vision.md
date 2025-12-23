@@ -32,7 +32,7 @@ key comparison (KC) results to the BIPM KCDB and for enabling systematic
 The architecture shall:
 
 - Establish a **canonical core data model** for KC reporting.
-- Explicitly support **DoE and DoE uncertainty** for CMC validation.
+- Explicitly support **DoE, DoE uncertainty, and NMI uncertainty** for CMC validation.
 - Enable **automated validation** of submissions.
 - Support **core + domain extensions** for physics and chemistry fields.
 - Be based on **open standards** (JSON Schema, Markdown, Mermaid).
@@ -43,7 +43,7 @@ The architecture shall:
 ## 4. Scope
 
 ### In Scope
-- KC, supplementary and pilot comparison reporting.
+- KC and supplementary comparison reporting.
 - Results, uncertainties, reference values, DoEs, correlations.
 - Submission, computation, review, publication, and CMC validation workflows.
 - Logical and physical data models.
@@ -51,6 +51,7 @@ The architecture shall:
 
 ### Out of Scope (initially)
 - Raw measurement series from laboratories.
+- Pilot comparison
 - Internal LIMS or laboratory systems.
 - Detailed numerical algorithms for KCRV computation (only interfaces).
 
@@ -67,6 +68,7 @@ The architecture shall:
 | CMC Review Bodies | Transparent DoE-based evidence |
 | IT Providers | Stable schemas and APIs |
 
+see stakeholders_concerns.md  for the detailed analysis of concerns.
 ---
 
 ## 6. High-Level Requirements

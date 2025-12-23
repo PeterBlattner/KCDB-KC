@@ -26,10 +26,10 @@ Strong involvement of domain experts; core + extension strategy.
 **Concern:**  
 The model must explicitly support Degrees of Equivalence and their
 uncertainties in a form that enables automated or semi-automated
-CMC validation.
+CMC validation. However, usually it is not sufficient to know the DOE and its uncertainty for validating a CMC but the NMI KC uncertainty needs to be known.
 
 **Implication:**  
-DoE and uncertainty become first-class concepts in the core model.
+DoE and uncertainty become first-class concepts in the core model. In addition, the "typical" NMI uncertainty in the KC needs to be known.
 
 ---
 

@@ -16,6 +16,7 @@ identified during Phase C (Data Architecture) of the KCDB Reference Data Archite
 initiative.
 
 The inventory reflects:
+
 - current practices found in KC and SC reports,
 - assumptions that require validation,
 - and sources of variability that must be addressed by the target data model.

@@ -1,0 +1,46 @@
+gitGraph
+  commit id: "init"
+
+  branch develop
+  checkout develop
+  commit id: "setup dev env"
+
+  branch feature/login
+  checkout feature/login
+  commit id: "add login UI"
+  commit id: "validate credentials"
+
+  checkout develop
+  merge feature/login id: "merge login feature"
+
+  branch feature/api
+  checkout feature/api
+  commit id: "create API endpoints"
+  commit id: "add auth middleware"
+
+  checkout develop
+  merge feature/api id: "merge API feature"
+
+  checkout main
+  merge develop id: "release 1.0"
+
+  branch hotfix/critical-bug
+  checkout hotfix/critical-bug
+  commit id: "fix null pointer bug"
+
+  checkout main
+  merge hotfix/critical-bug id: "release 1.0.1"
+
+  checkout develop
+  merge hotfix/critical-bug id: "backport hotfix"
+
+  branch feature/reporting
+  checkout feature/reporting
+  commit id: "add reports"
+  commit id: "export to CSV"
+
+  checkout develop
+  merge feature/reporting id: "merge reporting"
+
+  checkout main
+  merge develop id: "release 1.1"

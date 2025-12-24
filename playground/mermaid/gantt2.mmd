@@ -4,12 +4,12 @@ gantt
   excludes weekends
 
   section Discovery
-  Stakeholder interviews :done, 2025-01-02, 5d
-  Scope definition       :done,  after des1, 3d
+  Stakeholder interviews :done, des1, 2025-01-02, 5d
+  Scope definition       :done, des2, after des1, 3d
 
   section Delivery
-  Prototype              :active, after des2, 10d
-  Pilot                  :after prot, 8d
+  Prototype              :active, prot, after des2, 10d
+  Pilot                  :pilot, after prot, 8d
   Rollout                :after pilot, 10d
 
   section Governance

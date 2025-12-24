@@ -1,22 +1,105 @@
 flowchart LR
-    subgraph C[Customer]
-        C1[Place order]
-        C2[Receive confirmation]
-    end
+  %% Swimlane-style flowchart with more actors, decisions, exceptions, and parallel work
 
-    subgraph W[Web Shop]
-        W1[Validate order]
-        W2[Create order]
-        W3[Send confirmation]
-    end
+  subgraph C[Customer]
+    direction TB
+    C1[Browse catalog]
+    C2[Add items to cart]
+    C3[Checkout]
+    C4[Receive order confirmation]
+    C5[Track shipment]
+    C6[Receive delivery]
+    C7[Request return/refund]
+  end
 
-    subgraph P[Payment Service]
-        P1[Authorize payment]
-    end
+  subgraph W[Web Shop]
+    direction TB
+    W1[Validate cart]
+    W2{Items in stock?}
+    W3[Reserve inventory]
+    W4[Create order]
+    W5[Calculate tax & shipping]
+    W6[Generate invoice]
+    W7[Send confirmation email/SMS]
+    W8[Update order status]
+    W9[Notify backorder options]
+    W10[Cancel order]
+    W11[Create return authorization RMA]
+    W12[Notify customer of refund]
+  end
 
-    subgraph L[Logistics]
-        L1[Prepare shipment]
-    end
+  subgraph P[Payment Service]
+    direction TB
+    P1[Tokenize payment method]
+    P2{Fraud check pass?}
+    P3[Authorize payment]
+    P4{Authorization approved?}
+    P5[Capture funds]
+    P6[Void/Release authorization]
+    P7[Refund payment]
+  end
 
-    C1 --> W1 --> W2 --> P1
-    P1 --> W3 --> L1 --> C2
+  subgraph F[Fulfillment]
+    direction TB
+    F1[Create pick list]
+    F2[Pick items]
+    F3{All items picked?}
+    F4[Pack shipment]
+    F5[Create shipping label]
+    F6[Handover to carrier]
+    F7[Handle split shipment]
+    F8[Receive returned goods]
+    F9[Inspect returned goods]
+  end
+
+  subgraph L[Logistics / Carrier]
+    direction TB
+    L1[Scan at origin]
+    L2[In transit]
+    L3{Delivery successful?}
+    L4[Deliver package]
+    L5[Attempt redelivery / hold at depot]
+    L6[Return to sender]
+    L7[Publish tracking events]
+  end
+
+  subgraph S[Support]
+    direction TB
+    S1[Customer support ticket created]
+    S2[Verify order & eligibility]
+    S3{Eligible for return?}
+    S4[Provide return instructions]
+    S5[Reject return request]
+  end
+
+  %% Main purchase path
+  C1 --> C2 --> C3 --> W1
+  W1 --> W5 --> W2
+
+  W2 -- Yes --> W3 --> W4 --> P1 --> P2
+  W2 -- No --> W9 --> C3
+
+  %% Payment decisions
+  P2 -- Yes --> P3 --> P4
+  P2 -- No --> P6 --> W10 --> W8 --> C4
+
+  P4 -- Yes --> P5 --> W6 --> W7 --> W8 --> C4
+  P4 -- No --> P6 --> W10 --> W8 --> C4
+
+  %% Fulfillment path (starts after order is created; practical dependency is payment approved)
+  P5 --> F1 --> F2 --> F3
+  F3 -- Yes --> F4 --> F5 --> F6 --> L1
+  F3 -- No --> F7 --> F4
+
+  %% Tracking and delivery
+  L1 --> L2 --> L7 --> W8
+  W8 --> C5
+  L2 --> L3
+  L3 -- Yes --> L4 --> C6
+  L3 -- No --> L5 --> L3
+  L5 --> L6 --> W8
+
+  %% Returns / refunds flow
+  C6 --> C7 --> S1 --> S2 --> S3
+  S3 -- Yes --> S4 --> W11 --> F8 --> F9 --> P7 --> W12 --> C4
+  S3 -- No --> S5 --> C4

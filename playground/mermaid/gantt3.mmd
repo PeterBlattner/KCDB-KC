@@ -1,0 +1,59 @@
+gantt
+  title Program Plan (Extended) with Dependencies, Milestones, Parallel Tracks, and Buffers
+  dateFormat YYYY-MM-DD
+  excludes weekends
+
+  %% Optional: highlight key periods
+  %% (Works in many Mermaid renderers; if yours ignores it, simply remove.)
+  todayMarker stroke-width:2px
+
+  section Discovery
+  Kick-off                              :milestone, m0, 2025-01-02, 0d
+  Stakeholder interviews                :done,      des1, 2025-01-02, 5d
+  Current-state assessment (AS-IS)      :done,      des1b, after des1, 4d
+  Scope definition                      :done,      des2, after des1, 3d
+  Requirements backlog (v1)             :done,      des3, after des2, 6d
+  Discovery readout                     :milestone, m1,   after des3, 0d
+
+  section Architecture & Planning
+  Target architecture (draft)           :active,    arch1, after des2, 7d
+  Security & privacy review             :crit,      sec1,  after arch1, 4d
+  Data model & integration plan         :           arch2, after arch1, 6d
+  Delivery plan & estimates             :           plan1, after des3, 4d
+  Design baseline approved              :milestone, m2,    after sec1, 0d
+
+  section Delivery (Build)
+  Prototype (MVP)                       :active,    prot,  after m2,  10d
+  UX iteration                          :           ux1,   after prot, 5d
+  Backend services                      :           be1,   after prot, 12d
+  Integration (MVP)                     :crit,      int1,  after be1,  6d
+  System test (MVP)                     :crit,      test1, after int1, 5d
+  Release candidate (MVP)               :milestone, m3,    after test1, 0d
+
+  section Delivery (Pilot & Rollout)
+  Pilot prep (training + comms)         :           prep1, after m3,  6d
+  Pilot execution                       :active,    pilot, after prep1, 8d
+  Pilot evaluation & adjustments         :crit,      eval1, after pilot, 5d
+  Go/No-Go                              :milestone, gng,   after eval1, 0d
+  Rollout preparation                   :           rollprep, after gng, 6d
+  Rollout (Wave 1)                      :           roll1,    after rollprep, 8d
+  Rollout (Wave 2)                      :           roll2,    after roll1, 8d
+  Hypercare / Stabilization             :           hyper,    after roll2, 10d
+  Program closure                       :milestone, m4,      after hyper, 0d
+
+  section Change Management
+  Stakeholder map & sponsorship          :           cm1,  after des1, 5d
+  Communications plan                   :           cm2,  after des2, 5d
+  Training material development         :           cm3,  after prot, 10d
+  Training delivery                     :           cm4,  after prep1, 4d
+
+  section Governance & Risk
+  Risk review (initial)                 :crit,      gov1, after des2, 2d
+  Steering committee 1                 :milestone, sc1,  after des3, 0d
+  Steering committee 2                 :milestone, sc2,  after m3,  0d
+  Steering committee 3                 :milestone, sc3,  after gng, 0d
+  Risk review (pre-rollout)             :crit,      gov2, after gng,  2d
+
+  section Buffers & Contingency
+  Contingency buffer (MVP)              :           buf1, after test1, 3d
+  Contingency buffer (Rollout)          :           buf2, after roll2, 3d

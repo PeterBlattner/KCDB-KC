@@ -3,6 +3,7 @@
 **Version:** 0.1  
 **Status:** Draft  
 **Date:** 2025-12-22  
+**Author:** genAI (prompted by Peter B.)
 
 ---
 

@@ -5,6 +5,7 @@
 **Status:** Draft  
 **Date:** 2025-12-21  
 **Owner:** BIPM / KCDB Architecture Working Group  
+**Author:** genAI corrected by Peter B.
 
 ---
 
@@ -81,6 +82,7 @@ see *stakeholders_concerns.md*  for the detailed analysis of concerns.
   - reference values,
   - DoEs and their uncertainties,
   - correlation models.
+  - traceability?
 - Versioned, immutable publication records.
 - Backward compatibility where feasible.
 - Extensible without forking the core model.
@@ -106,7 +108,7 @@ flowchart LR
     B -->|Validated data| C["Computation Service<br/>(KCRV, DoE, uncertainties)"]
     C -->|Results + provenance| D["KCDB Core Repository"]
     D -->|Evidence| E["CMC Validation Service"]
-    D -->|Publication| F["KCDB Portal / APIs"]
+    E -->|Publication| F["KCDB Portal / APIs"]
 ```
 
 ---

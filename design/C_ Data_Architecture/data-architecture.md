@@ -5,6 +5,7 @@
 **Status:** Draft  
 **Date:** 2025-12-22  
 **Owner:** BIPM / KCDB Architecture Working Group  
+**Author:** genAI corrected by Peter B.
 
 ---
 
@@ -140,6 +141,7 @@ ReferenceValue | Agreed reference value and uncertainty (e.g., KCRV). |
 DegreeOfEquivalence | Delta and uncertainty relative to the reference value. |
 UncertaintyStatement | Standard/expanded uncertainty, k, coverage, method. |
 CorrelationModel | Correlations/covariances relevant to uncertainty. |
+Metrological traceability | Tracebility to an international agreed reference |
 Provenance | Metadata on source, method, versions, timestamps. |
 
 ---

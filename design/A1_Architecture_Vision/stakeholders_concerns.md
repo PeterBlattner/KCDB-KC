@@ -1,4 +1,5 @@
 ## X. Stakeholder Concerns
+**Author:** genAI corrected by Peter B.
 
 The following stakeholder concerns have been identified for the
 "Harmonised Digital Model for KCDB Comparison Reporting and CMC Validation"
@@ -144,6 +145,7 @@ Early pilots, visible wins, strong communication.
 ---
 
 These concerns will be used to:
+
 - define scope and priorities,
 - derive architecture principles,
 - assess options and trade-offs,

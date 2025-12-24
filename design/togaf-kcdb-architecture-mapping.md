@@ -5,6 +5,7 @@
 **Status:** Draft (Updated)  
 **Date:** 2025-12-22  
 **Owner:** BIPM / KCDB Architecture Working Group  
+**Author:** genAI corrected by Peter B.
 
 ---
 

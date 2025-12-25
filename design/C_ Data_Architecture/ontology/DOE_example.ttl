@@ -1,0 +1,23 @@
+@prefix : <https://example.org/kcdb/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:DegreeOfEquivalence a owl:Class .
+
+:UncertaintyStatement a owl:Class .
+
+:hasUncertainty a owl:ObjectProperty ;
+  rdfs:domain :DegreeOfEquivalence ;
+  rdfs:range  :UncertaintyStatement .
+
+# Strongly constrained class for new/fully conformant data:
+:CompliantDoE a owl:Class ;
+  rdfs:subClassOf :DegreeOfEquivalence ,
+    [ a owl:Restriction ;
+      owl:onProperty :hasUncertainty ;
+      owl:someValuesFrom :UncertaintyStatement ] .
+
+# For legacy / partial records:
+:LegacyDoE a owl:Class ;
+  rdfs:subClassOf :DegreeOfEquivalence .

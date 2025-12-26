@@ -16,7 +16,7 @@
 This document is the Architecture Description (AD) for the **KCDB Reference Data Architecture**.  
 It describes the architecture in conformance with ISO/IEC/IEEE 42010, identifying stakeholders
 and concerns, defining viewpoints, and presenting views that collectively specify a canonical,
-machine-readable information architecture for comparison reporting and CMC validation.  [oai_citation:0‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
+machine-readable information architecture for comparison reporting and CMC validation.  [architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
 
 ### 1.2 Scope
 The scope covers:
@@ -30,8 +30,9 @@ Out of scope (initially):
 
 - Raw laboratory time series,
 - Internal LIMS systems,
-- Detailed numerical algorithms (interfaces only).  [oai_citation:1‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
-
+- Detailed numerical algorithms (interfaces only).  
+ [architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
+ 
 ### 1.3 Conformance
 This architecture description conforms to ISO/IEC/IEEE 42010.
 
@@ -42,7 +43,8 @@ This architecture description conforms to ISO/IEC/IEEE 42010.
 ### 2.1 Identification
 The system of interest is the **KCDB Reference Information Architecture Capability**:
 a cross-domain, sustainable architecture enabling harmonised, machine-readable reporting
-of KC/SC results and their use as evidence for CMC validation.  [oai_citation:2‡togaf-kcdb-architecture-mapping.md](sediment://file_00000000882c71f4aa94091484e92c9b)
+of KC/SC results and their use as evidence for CMC validation.  
+[architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
 
 ### 2.2 Context
 The system operates within:
@@ -51,7 +53,7 @@ The system operates within:
 - Consultative Committees (CCs),
 - NMIs/DIs and pilot laboratories,
 - CMC review bodies,
-- Supporting IT and digital SI initiatives.  [oai_citation:3‡togaf-kcdb-architecture-mapping.md](sediment://file_00000000882c71f4aa94091484e92c9b)
+- Supporting IT and digital SI initiatives.  [togaf-kcdb-architecture-mapping.md](togaf-kcdb-architecture-mapping.md)
 
 ---
 
@@ -69,7 +71,7 @@ S-05 | CMC review bodies | Transparent DoE-based evidence |
 S-06 | IT providers | Stable schemas & APIs |
 S-07 | BIPM Management | Sustainability & governance |
 
- [oai_citation:4‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
+[architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
 
 ### 3.2 Concerns
 
@@ -88,8 +90,8 @@ C-10 | Security & access control |
 C-11 | Long-term sustainability |
 C-12 | Measurable value & adoption |
 
- [oai_citation:5‡stakeholders_concerns.md](sediment://file_0000000073d0720aba7e0621c7b648c7)
-
+ [stakeholders_concerns.md](A1_Architecture_Vision/stakeholders_concerns.md)
+ 
 ---
 
 ## 4. Viewpoints

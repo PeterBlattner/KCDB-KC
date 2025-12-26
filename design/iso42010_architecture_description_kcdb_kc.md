@@ -166,14 +166,16 @@ C-12 | Measurable value & adoption |
 - **Viewpoint:** Application  
 - **Concerns:** C-04, C-06, C-10  
 - **Description:** Submission, validation, computation, KCDB repository, CMC validation services.  
-- **Artifacts:** Interaction diagrams, API contracts (Phase D).  [oai_citation:6‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
+- **Artifacts:** Interaction diagrams, API contracts (Phase D).  
+[architekture_vision.md](A1_Architecture_Vision/architekture_vision.md) 
 
 ### 5.5 View: Target Architecture Overview
 
 - **Viewpoint:** Application  
 - **Concerns:** C-02, C-06, C-12  
 - **Description:** High-level flow from NMIs to KCDB and CMC validation.  
-- **Artifacts:** Vision flow diagram.  [oai_citation:7‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
+- **Artifacts:** Vision flow diagram.
+  [architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
 
 ---
 
@@ -187,7 +189,9 @@ C-12 | Measurable value & adoption |
   - its reference value,
   - its uncertainty,
   - the contributing participant results.
-- Every CMC claim references supporting DoEs and typical NMI uncertainties.  [oai_citation:8‡stakeholders_concerns.md](sediment://file_0000000073d0720aba7e0621c7b648c7)
+- Every CMC claim references supporting DoEs and typical NMI uncertainties.  
+
+ [stakeholders_concerns.md](A1_Architecture_Vision/stakeholders_concerns.md)
 
 ### 6.2 Example Correspondences
 
@@ -220,13 +224,16 @@ AD-05 | Versioned, immutable records | Traceability & auditability | Data, Gover
 
 - Must coexist with legacy KCDB records.
 - Must rely on open standards and sustainable tooling.
-- Must gain acceptance across CC domains.  [oai_citation:9‡architekture_vision.md](sediment://file_00000000845071f4a9ae9fd087ac9bd8)
+- Must gain acceptance across CC domains.  
+- 
+ [architekture_vision.md](A1_Architecture_Vision/architekture_vision.md)
 
 ### 8.2 Assumptions
 
 - CCs will participate in extension design.
 - Pilot implementations will guide refinement.
-- Governance bodies will be established.  [oai_citation:10‡togaf-kcdb-architecture-mapping.md](sediment://file_00000000882c71f4aa94091484e92c9b)
+- Governance bodies will be established.  
+[togaf-kcdb-architecture-mapping.md](togaf-kcdb-architecture-mapping.md)
 
 ---
 
@@ -245,7 +252,9 @@ Changes follow TOGAF Phase H:
 - Formal change requests,
 - Impact analysis,
 - Review by governance boards,
-- Versioned releases with deprecation policy.  [oai_citation:11‡togaf-kcdb-architecture-mapping.md](sediment://file_00000000882c71f4aa94091484e92c9b)
+- Versioned releases with deprecation policy.  
+
+[togaf-kcdb-architecture-mapping.md](togaf-kcdb-architecture-mapping.md)
 
 ---
 

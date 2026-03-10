@@ -48,7 +48,7 @@ baseline inventory items (**INV-nn**).
 
 ---
 
-## 3. Baseline Inventory Traceability
+## 3. Baseline Inventory Evidence
 
 **Inventory Items (INV-01 … INV-34)** refer to the numbered list collected in Phase C.
 
@@ -64,7 +64,7 @@ The model shall support unique, persistent identifiers for:
 - comparisons (KC/SC),
 - measurands,
 - participants,
-- reported results,
+- reported results (incl. uncertainty),
 - reference values,
 - DoEs,
 - and publication packages.  
@@ -79,7 +79,7 @@ The model shall support versioning of:
 - computed reference values and DoEs,
 - publication packages,
 and shall allow immutable published versions.  
-**Traceability:** INV-31, INV-32
+**Evidence:** INV-31, INV-32
 
 ---
 
@@ -236,7 +236,7 @@ relevant to reference value and DoE uncertainty, including:
 - pairwise correlations,
 - matrix forms,
 and scope (which results/measurands).  
-**Traceability:** INV-23, INV-15–INV-16 (complex), INV-08
+**Evidence:** INV-23, INV-15–INV-16 (complex), INV-08
 
 ---
 
@@ -246,7 +246,7 @@ and scope (which results/measurands).
 The model shall support explicit links between comparisons (KC↔KC, SC↔KC, etc.)
 including link type (e.g., uses reference from, related to, continuation) and
 rationale.  
-**Traceability:** INV-07, INV-22, INV-12
+**Evidence:** INV-07, INV-22, INV-12
 
 ---
 
@@ -257,13 +257,13 @@ The model shall support the relationship that:
 
 - a KC/SC can support multiple CMC claims, and
 - a CMC claim can be supported by multiple KCs/SCs.  
-**Traceability:** INV-01, INV-02
+**Evidence:** INV-01, INV-02
 
 **DR-23 — Measurand mapping between KC/SC and CMC**  
 The model shall support mapping between KC/SC measurands and corresponding CMC
 measurands where such a relationship exists, including mapping type and rationale
 (exact match, partial match, derived).  
-**Traceability:** INV-11
+**Evidence:** INV-11
 
 ---
 
@@ -271,12 +271,12 @@ measurands where such a relationship exists, including mapping type and rational
 The model shall support capturing whether measurement conditions in KC/SC are the
 same as or differ from those in the linked CMC claim, including the relevant
 conditions set.  
-**Traceability:** INV-17
+**Evidence:** INV-17
 
 **DR-25 — CMC guidance notes (optional)**  
 The model shall support storing qualitative guidance notes associated with CMC
 evaluation (e.g., interpretive guidance), including attribution and scope.  
-**Traceability:** INV-24
+**Evidence:** INV-24
 
 ---
 
@@ -284,7 +284,7 @@ evaluation (e.g., interpretive guidance), including attribution and scope.
 The model shall support representing the fact that DoE and U(DoE) alone may be
 insufficient for CMC review and that participant/NMI uncertainty information may
 also be required as evidence inputs.  
-**Traceability:** INV-34
+**Evidence:** INV-34
 
 ---
 
@@ -296,7 +296,7 @@ The model shall support metadata indicating whether:
 - DoE tables/graphs are available via KCDB,
 - reports are available via KCDB or externally,
 including links and status codes.  
-**Traceability:** INV-31, INV-32
+**Evidence:** INV-31, INV-32
 
 ---
 

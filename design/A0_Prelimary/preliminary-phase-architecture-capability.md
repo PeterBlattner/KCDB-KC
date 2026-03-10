@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Preliminary Phase – Establishing the Architecture Capability  
 ## KCDB Reference Data Architecture
 
@@ -39,12 +43,13 @@ The architecture capability covers:
   - schema changes,
   - extension approval,
   - versioning and deprecation.
+---
 - Alignment with business processes for:
   - comparisons lifecycle,
   - publication,
   - CMC review.
 
-It applies to all KC/SC domains coordinated through BIPM and the CCs.
+It applies to all KC/SC domains coordinated the CCs.
 
 ---
 
@@ -77,6 +82,7 @@ The following bodies are established:
   Provides oversight and approves major decisions, releases, and extensions.
 - **Domain Extension Panels (per CC)**  
   Propose and review domain-specific extensions.
+---
 
 ### 4.2 Responsibilities
 
@@ -118,9 +124,11 @@ A single canonical core data model shall be maintained for all KC/SC reporting.
 ### P2. Core + Extensions
 Domain-specific needs shall be addressed through governed extensions, not forks.
 
-### P3. DoE and Reference Values as First-Class Data
+### P3. DoE, Reference Values, participants uncertainty as First-Class Data
 Degrees of Equivalence and reference values shall be explicitly represented,
 including uncertainties and provenance.
+
+---
 
 ### P4. Machine-Readable by Default
 All specifications shall be machine-readable and support automated validation.
@@ -136,6 +144,8 @@ Open, widely adopted standards shall be used wherever possible.
 
 ### P8. Backward Compatibility
 Changes shall minimise disruption and support coexistence where feasible.
+
+---
 
 ### P9. Governed Evolution
 All changes shall follow a formal review and approval process.

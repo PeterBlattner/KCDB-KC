@@ -1,3 +1,8 @@
+---
+marp: true
+---
+
+
 ## X. Stakeholder Concerns
 **Author:** genAI corrected by Peter B.
 

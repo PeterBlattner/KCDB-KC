@@ -1,3 +1,8 @@
+---
+marp: true
+---
+
+
 # Architecture Vision  
 ## Harmonised Digital Model for KCDB Comparison Reporting & CMC Validation
 
@@ -35,9 +40,9 @@ The architecture shall:
 - Establish a **canonical core data model** for KC reporting.
 - Explicitly support **DoE, DoE uncertainty, and NMI uncertainty** for CMC validation.
 - Enable **automated validation** of submissions.
-- Support **core + domain extensions** for physics and chemistry fields.
-- Be based on **open standards** (JSON Schema, Markdown, Mermaid).
 - Provide governance for **versioning and evolution**.
+- Be based on **open standards** (JSON Schema, Markdown, Mermaid).
+
 
 ---
 
@@ -46,15 +51,18 @@ The architecture shall:
 ### In Scope
 - KC and supplementary comparison reporting.
 - Results, uncertainties, reference values, DoEs, correlations.
-- Submission, computation, review, publication, and CMC validation workflows.
 - Logical and physical data models.
-- Interfaces to KCDB and validation services.
 
-### Out of Scope (initially)
+
+### Eventually later in Scope
+- Submission, computation, review, publication, and CMC validation workflows.
+- Interfaces to KCDB and validation services.
+---
+### Out of Scope
 - Raw measurement series from laboratories.
 - Pilot comparison
 - Internal LIMS or laboratory systems.
-- Detailed numerical algorithms for KCRV computation (only interfaces).
+- Detailed numerical algorithms for KCRV computation.
 
 ---
 
@@ -66,8 +74,8 @@ The architecture shall:
 | Consultative Committees | Domain fit, scientific correctness |
 | Pilot Laboratories | Practical submission & tooling |
 | NMIs / DIs | Effort, clarity, reuse for CMCs |
-| CMC Review Bodies | Transparent DoE-based evidence |
-| IT Providers | Stable schemas and APIs |
+| CMC Reviewers | Transparent DoE-based evidence |
+
 
 see *stakeholders_concerns.md*  for the detailed analysis of concerns.
  

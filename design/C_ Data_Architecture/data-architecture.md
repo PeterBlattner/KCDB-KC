@@ -1,3 +1,8 @@
+---
+marp: true
+---
+
+
 # Phase C – Data Architecture  
 ## KCDB Reference Data Architecture
 
@@ -35,6 +40,7 @@ The focus is on data required to report **key comparison results** and to enable
 - Comparison metadata and provenance.
 - Domain extensions for physics, chemistry and biology fields.
 
+--- 
 
 ### Out of Scope (initially)
 - Raw measurement time series.
@@ -71,6 +77,8 @@ The current baseline is characterised by:
 - Strong domain dependence of structure and terminology.
 - Limited machine-actionable semantics.
 - Manual consolidation and validation steps.
+
+---
 
 ### 4.2 Key Issues
 
@@ -136,7 +144,7 @@ as the authoritative source for schema derivation.
 Comparison | Metadata describing a comparison (type, dates, status). |
 Measurand | Definition of the quantity and conditions under comparison. |
 Participant | NMI/DI participating in the comparison. |
-ReportedResult | Value and uncertainty submitted by a participant. |
+ReportedResult | Value and uncertainty submitted by a participant, . |
 ReferenceValue | Agreed reference value and uncertainty (e.g., KCRV). |
 DegreeOfEquivalence | Delta and uncertainty relative to the reference value. |
 UncertaintyStatement | Standard/expanded uncertainty, k, coverage, method. |
@@ -146,14 +154,15 @@ Provenance | Metadata on source, method, versions, timestamps. |
 
 ---
 
-### 5.5 DoE and Uncertainty as First-Class Data
+### First-Class Data
 
 The target architecture treats:
 
-- **Degree of Equivalence (DoE)** and
+- **Degree of Equivalence (DoE)** 
 - **its associated uncertainty**
+- **uncertainty reported by the participant**
 
-as explicit, persistent data objects, not merely derived values in reports. In addition the uncertainty reported by the NMI in the comparison needs to be considered. 
+as explicit, persistent data objects.
 
 This enables:
 
@@ -161,8 +170,6 @@ This enables:
 - automated consistency checks,
 - traceable recomputation if required.
 
-Correlation information is explicitly represented where it influences DoE
-uncertainty.
 
 ---
 
@@ -277,4 +284,3 @@ Following this Phase C definition:
 
 These issues will be addressed in subsequent iterations.
 
----

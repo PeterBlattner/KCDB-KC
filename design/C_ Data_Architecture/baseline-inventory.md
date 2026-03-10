@@ -1,3 +1,8 @@
+---
+marp: true
+---
+
+
 # Baseline Inventory of Observations and Hypotheses  
 ## KCDB Reference Data Architecture – Phase C
 

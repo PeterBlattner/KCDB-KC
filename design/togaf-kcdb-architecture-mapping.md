@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # KCDB Reference Data Architecture  
 ## Mapping the Initiative to TOGAF ADM
 
@@ -12,11 +16,9 @@
 ## Introduction
 
 The KCDB Reference Data Architecture initiative establishes a **canonical,
-machine-readable information architecture** for reporting key and supplementary
+machine-readable information architecture** for reporting 
 comparison (KC/SC) results and for enabling **systematic validation of CMC claims**
-based on Degrees of Equivalence (DoE).
-
-What is being designed is not merely a new exchange format, but a sustainable
+based on Degrees of Equivalence (DoE). What is being designed is not merely a new exchange format, but a sustainable
 **cross-domain architecture capability** that:
 
 - harmonises highly diverse reporting practices across Consultative Committees,
@@ -38,7 +40,7 @@ The KCDB problem space exhibits all characteristics for which TOGAF is intended:
 - Long lifecycle with scientific traceability requirements.
 - Need for a **common target architecture** accepted across domains.
 - Continuous evolution driven by new methods, domains, and Digital SI.
-
+---
 Baseline analysis shows high variability in:
 
 - reference values (KCRV, CRV, artefact-based, class-based),
@@ -96,8 +98,8 @@ This is therefore the design of a:
   - reference values, DoEs, uncertainties, provenance,
   - links to CMC claims.
 - Identify stakeholders and enumerate concerns.
-
-**Deliverables:**
+---
+**Deliverables (Phase A):**
 
 - Architecture Vision document.  
 - Stakeholder map and concerns.  
@@ -123,8 +125,8 @@ This is therefore the design of a:
 
 - Roles (Pilot, CC WGs, reviewers, KCDB team, NMIs/DIs).
 - Information flows and decision gates.
-
-**Deliverables:**
+---
+**Deliverables (Phase B):**
 
 - Business process models (BPMN).  
 - Business functions and actors.  
@@ -145,7 +147,7 @@ This is therefore the design of a:
   - measurand representations,
   - linking between comparisons,
   - availability and publication status.
-
+---
 #### Target
 
 - Canonical conceptual and logical model.
@@ -160,10 +162,11 @@ This is where:
 
 - conceptual model extraction,
 - PlantUML modeling,
-- and JSON Schema derivation  
-are anchored.
+- and JSON Schema derivation are anchored.
 
-**Deliverables:**
+---
+
+**Deliverables (Phase C):**
 
 - Baseline findings and inventory.  
 - Target conceptual & logical data model.  
@@ -190,8 +193,8 @@ are anchored.
 - All applications consume and produce canonical data.
 - APIs are schema-driven.
 - Provenance flows end-to-end.
-
-**Deliverables:**
+---
+**Deliverables (Phase D):**
 
 - Application portfolio.  
 - Interaction diagrams.  
@@ -210,8 +213,8 @@ are anchored.
 - Example libraries and test cases.
 - Pilot CC deployments.
 - Toolchain prototypes.
-
-**Deliverables:**
+---
+**Deliverables (Phase (E)):**
 
 - Solution concept.  
 - Work packages.  
@@ -229,8 +232,8 @@ are anchored.
 - Coexistence with legacy submissions.
 - Strategy for historical data (where feasible).
 - Incremental rollout.
-
-**Deliverables:**
+---
+**Deliverables (Phase F):**
 
 - Migration roadmap.  
 - Risks and mitigations.
@@ -247,8 +250,8 @@ are anchored.
 - Approval of domain extensions.
 - Version control and release gates.
 - Conformance criteria.
-
-**Deliverables:**
+---
+**Deliverables (Phase G):**
 
 - Governance process.  
 - Conformance checklists.  
@@ -266,8 +269,8 @@ are anchored.
 - New uncertainty and correlation models.
 - Digital SI evolution.
 - New reporting and validation needs.
-
-**Deliverables:**
+---
+**Deliverables (Phase H):**
 
 - Change workflow.  
 - Versioning and deprecation policy.
@@ -315,6 +318,8 @@ This architecture approach:
   - governance,
   - phased rollout,
   - long-term sustainability.
+
+---
 - Avoids a fragmented “many schemas” future.
 
 It positions the initiative as:
@@ -335,5 +340,3 @@ The KCDB initiative aligns strongly with TOGAF:
 
 This provides structure, legitimacy, and sustainability for a
 multi-domain, multi-stakeholder transformation.
-
----

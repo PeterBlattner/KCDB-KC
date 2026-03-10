@@ -1,3 +1,8 @@
+---
+marp: true
+---
+
+
 # Data Requirements  
 ## KCDB Reference Data Architecture (TOGAF Phase C)
 
@@ -59,7 +64,9 @@ The model shall support unique, persistent identifiers for:
 - reference values,
 - DoEs,
 - and publication packages.  
-**Traceability:** INV-33
+**Evidences:** INV-33
+
+---
 
 **DR-02 — Versioning of submitted and published data**  
 The model shall support versioning of:
@@ -69,6 +76,8 @@ The model shall support versioning of:
 and shall allow immutable published versions.  
 **Traceability:** INV-31, INV-32
 
+---
+
 **DR-03 — Provenance for derived data**  
 The model shall capture provenance for derived objects (e.g., KCRV/CRV, DoE),
 including:
@@ -76,7 +85,7 @@ including:
 - method/algorithm identifier,
 - parameterization/assumptions (incl. correlation assumptions),
 - timestamp and responsible party.  
-**Traceability:** INV-23, INV-12, INV-31, INV-32
+**Evidences:** INV-23, INV-12, INV-31, INV-32
 
 ---
 
@@ -84,7 +93,7 @@ including:
 
 **DR-04 — Multiple measurands per comparison**  
 The model shall support one or more measurands per KC/SC.  
-**Traceability:** INV-10
+**Evidences:** INV-10
 
 **DR-05 — Measurand value structure**  
 The model shall support measurands where reported values and/or DoEs are:
@@ -92,13 +101,15 @@ The model shall support measurands where reported values and/or DoEs are:
 - vector (e.g., spectral),
 - complex,
 - complex vector.  
-**Traceability:** INV-13, INV-14, INV-15, INV-16
+**Evidences:** INV-13, INV-14, INV-15, INV-16
+
+---
 
 **DR-06 — Parameterised measurands / external parameters**  
 The model shall support reporting results and DoEs as a function of one or more
 external parameters (e.g., current, frequency), including the parameter definition,
 units, and sampling points.  
-**Traceability:** INV-28
+**Evidences:** INV-28
 
 ---
 
@@ -110,12 +121,14 @@ The model shall support participant-submitted results for each measurand, includ
 - unit(s),
 - uncertainty statement,
 - method summary (optional).  
-**Traceability:** INV-34, INV-10, INV-13–INV-16
+**Evidences:** INV-34, INV-10, INV-13–INV-16
+
+---
 
 **DR-08 — Participant uncertainty is explicitly representable**  
 The model shall represent the participant’s stated uncertainty explicitly and
 independently of DoE uncertainty.  
-**Traceability:** INV-34
+**Evidences:** INV-34
 
 ---
 
@@ -124,7 +137,9 @@ independently of DoE uncertainty.
 **DR-09 — Reference values are first-class objects**  
 The model shall represent reference values as first-class objects linked to a
 measurand, including value(s), unit(s), and uncertainty statements.  
-**Traceability:** INV-03, INV-05
+**Evidences:** INV-03, INV-05
+
+---
 
 **DR-10 — Support multiple reference value types and provenance**  
 The model shall support reference value types, including at minimum:
@@ -134,18 +149,22 @@ The model shall support reference value types, including at minimum:
 - artefact-class-based CRV,
 - external/reference-from-other-comparison.  
 Provenance shall identify the defining party and method.  
-**Traceability:** INV-03, INV-05, INV-12, INV-18, INV-20, INV-27
+**Evidences:** INV-03, INV-05, INV-12, INV-18, INV-20, INV-27
+---
+
 
 **DR-11 — Comparisons may reference reference values from other comparisons**  
 The model shall support explicit linkage where a KC/SC refers to a KCRV/CRV defined
 in another KC/SC, including reference type and rationale.  
-**Traceability:** INV-12, INV-07, INV-22
+**Evidences:** INV-12, INV-07, INV-22
+
+---
 
 **DR-12 — Support “consistency-only” outcomes**  
 The model shall support cases where supplementary comparisons present participant
 consistency statements without defining a CRV in the traditional sense, while still
 capturing the methodological basis and outputs.  
-**Traceability:** INV-21
+**Evidences:** INV-21
 
 ---
 
@@ -154,40 +173,46 @@ capturing the methodological basis and outputs.
 **DR-13 — DoE is first-class and linked to participant and measurand**  
 The model shall represent DoE as a first-class object for a participant and
 measurand, linked to the applicable reference value.  
-**Traceability:** INV-04, INV-06
+**Evidences:** INV-04, INV-06
+
+---
 
 **DR-14 — DoE variants (unilateral/mutual)**  
 The model shall support reporting:
 - unilateral DoE,
 - mutual DoE,
 including a clear designation of the DoE type and definition used.  
-**Traceability:** INV-09
+**Evidences:** INV-09
 
 **DR-15 — DoE uncertainty statement**  
 The model shall support an uncertainty statement associated with each DoE
 (e.g., u(DoE), U(DoE), U_neg(DOE), U_pos(DOE), k, coverage probability), including cases where only partial
 information is available.  
-**Traceability:** INV-08, INV-29, INV-30
+**Evidences:** INV-08, INV-29, INV-30
+
+---
 
 **DR-16 — DoE computation method metadata**  
 The model shall capture the method used to calculate DoEs (e.g., named method,
 decision-tree approach), including references to documentation.  
-**Traceability:** INV-23
+**Evidences:** INV-23
 
 **DR-17 — Optional limits and qualifiers in DoE tables**  
 The model shall support reporting table-level or row-level limits/constraints
 (e.g., bounds, thresholds, notes) as published in DoE tables.  
-**Traceability:** INV-25
+**Evidences:** INV-25
+
+---
 
 **DR-18 — Coverage metrics (e.g., En)**  
 The model shall support optional coverage/consistency metrics associated with a
 participant and measurand (e.g., En, z-score), including parameters used.  
-**Traceability:** INV-19
+**Evidences:** INV-19
 
 **DR-19 — Reporting minimal uncertainties (UminCMC) where provided**  
 The model shall support reporting minimal relative expanded uncertainties (UminCMC)
 consistent with a proposed KCRV/CRV, including associated assumptions.  
-**Traceability:** INV-26
+**Evidences:** INV-26
 
 ---
 
@@ -228,6 +253,8 @@ measurands where such a relationship exists, including mapping type and rational
 (exact match, partial match, derived).  
 **Traceability:** INV-11
 
+---
+
 **DR-24 — Conditions mapping between KC/SC and CMC**  
 The model shall support capturing whether measurement conditions in KC/SC are the
 same as or differ from those in the linked CMC claim, including the relevant
@@ -238,6 +265,8 @@ conditions set.
 The model shall support storing qualitative guidance notes associated with CMC
 evaluation (e.g., interpretive guidance), including attribution and scope.  
 **Traceability:** INV-24
+
+---
 
 **DR-26 — Evidence sufficiency**  
 The model shall support representing the fact that DoE and U(DoE) alone may be

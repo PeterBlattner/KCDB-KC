@@ -20,6 +20,7 @@ This document captures **data requirements** derived from Phase C baseline inven
 (observations and hypotheses) for the KCDB Reference Data Architecture initiative.
 
 The requirements are structured to support:
+
 - Harmonised reporting of key/supplementary comparisons (KC/SC),
 - Publication and traceability in/with KCDB,
 - Validation of CMC claims using **Degrees of Equivalence (DoE)** and associated uncertainty.
@@ -32,6 +33,7 @@ baseline inventory items (**INV-nn**).
 ## 2. Scope
 
 ### In Scope
+
 - Comparison metadata, measurands, participants.
 - Reported results, reference values (KCRV/CRV), DoEs and uncertainties.
 - Correlation/covariance information relevant to DoE uncertainty.
@@ -39,6 +41,7 @@ baseline inventory items (**INV-nn**).
 - Publication/availability metadata and provenance/versioning.
 
 ### Out of Scope (initially)
+
 - Raw measurement time series.
 - Internal laboratory information systems (LIMS) structures.
 - Full specification of numerical algorithms (only inputs/outputs + provenance).
@@ -57,6 +60,7 @@ baseline inventory items (**INV-nn**).
 
 **DR-01 — Unique identifiers**  
 The model shall support unique, persistent identifiers for:
+
 - comparisons (KC/SC),
 - measurands,
 - participants,
@@ -69,6 +73,7 @@ The model shall support unique, persistent identifiers for:
 ---
 
 **DR-02 — Versioning of submitted and published data**  
+
 The model shall support versioning of:
 - participant submissions,
 - computed reference values and DoEs,
@@ -81,6 +86,7 @@ and shall allow immutable published versions.
 **DR-03 — Provenance for derived data**  
 The model shall capture provenance for derived objects (e.g., KCRV/CRV, DoE),
 including:
+
 - input dataset versions,
 - method/algorithm identifier,
 - parameterization/assumptions (incl. correlation assumptions),
@@ -97,6 +103,7 @@ The model shall support one or more measurands per KC/SC.
 
 **DR-05 — Measurand value structure**  
 The model shall support measurands where reported values and/or DoEs are:
+
 - scalar,
 - vector (e.g., spectral),
 - complex,
@@ -117,6 +124,7 @@ units, and sampling points.
 
 **DR-07 — Participant reported results**  
 The model shall support participant-submitted results for each measurand, including:
+
 - value(s),
 - unit(s),
 - uncertainty statement,
@@ -143,6 +151,7 @@ measurand, including value(s), unit(s), and uncertainty statements.
 
 **DR-10 — Support multiple reference value types and provenance**  
 The model shall support reference value types, including at minimum:
+
 - KCRV,
 - CRV (supplementary comparisons),
 - artefact-specific CRV,
@@ -179,6 +188,7 @@ measurand, linked to the applicable reference value.
 
 **DR-14 — DoE variants (unilateral/mutual)**  
 The model shall support reporting:
+
 - unilateral DoE,
 - mutual DoE,
 including a clear designation of the DoE type and definition used.  
@@ -221,6 +231,7 @@ consistent with a proposed KCRV/CRV, including associated assumptions.
 **DR-20 — Correlation model representation**  
 The model shall support representation of correlation/covariance information
 relevant to reference value and DoE uncertainty, including:
+
 - none / assumed zero,
 - pairwise correlations,
 - matrix forms,
@@ -243,6 +254,7 @@ rationale.
 
 **DR-22 — Many-to-many KC/SC to CMC claim relationships**  
 The model shall support the relationship that:
+
 - a KC/SC can support multiple CMC claims, and
 - a CMC claim can be supported by multiple KCs/SCs.  
 **Traceability:** INV-01, INV-02
@@ -280,6 +292,7 @@ also be required as evidence inputs.
 
 **DR-27 — Availability metadata**  
 The model shall support metadata indicating whether:
+
 - DoE tables/graphs are available via KCDB,
 - reports are available via KCDB or externally,
 including links and status codes.  
@@ -295,10 +308,9 @@ The following hypotheses require validation with stakeholders and/or corpus evid
 - H-02: All KCs have one or more DoEs. (INV-04)
 - H-03: All DoEs have associated U(DoE). (INV-08)
 - H-04: All U(DoE) are reported at 95% confidence. (INV-29)
-- H-05: Some DoE uncertainty distributions are asymmetrical. (INV-30)
-- H-06: All KC/SC have unique identifiers. (INV-33)
-- H-07: Some KC measurands correspond directly to CMC measurands. (INV-11)
-- H-08: Some KC/SC conditions match CMC conditions. (INV-17)
+- H-05: All KC/SC have unique identifiers. (INV-33)
+- H-06: Some KC measurands correspond directly to CMC measurands. (INV-11)
+- H-07: Some KC/SC conditions match CMC conditions. (INV-17)
 
 Validated outcomes shall be recorded as architecture decisions and may lead to
 updates in requirement statements or optionality.

@@ -73,12 +73,14 @@ The ADM is **iterative**, with continuous feedback and refinement.
 Set up the conditions for running an architecture programme.
 
 **Typical activities:**
+
 - Define scope and mandate.
 - Establish governance and roles.
 - Agree on principles.
 - Set up repository and tools.
 
 **Typical deliverables:**
+
 - Architecture charter.
 - Architecture principles.
 - Governance structure.
@@ -92,12 +94,14 @@ Set up the conditions for running an architecture programme.
 Define why the initiative exists and what success looks like.
 
 **Typical activities:**
+
 - Identify drivers and goals.
 - Define scope and constraints.
 - Identify stakeholders and concerns.
 - Outline target vision.
 
 **Typical deliverables:**
+
 - Architecture Vision document.
 - Stakeholder map.
 - High-level requirements.
@@ -111,11 +115,13 @@ Define why the initiative exists and what success looks like.
 Understand and design the business context and processes.
 
 **Typical activities:**
+
 - Model baseline and target business processes.
 - Identify roles and responsibilities.
 - Analyse gaps.
 
 **Typical deliverables:**
+
 - Business process models.
 - Business function and organisation models.
 - Business requirements.
@@ -131,6 +137,7 @@ Understand and design the business context and processes.
 Define how information is structured, governed, and used.
 
 **Typical deliverables:**
+
 - Baseline and target data architecture.
 - Conceptual and logical data models.
 - Data principles and requirements.
@@ -142,6 +149,7 @@ Define how information is structured, governed, and used.
 Define how applications support the business and use the data.
 
 **Typical deliverables:**
+
 - Baseline and target application architecture.
 - Application interaction diagrams.
 - Interface and service definitions.
@@ -155,6 +163,7 @@ Define how applications support the business and use the data.
 Define the infrastructure needed to support applications.
 
 **Typical deliverables:**
+
 - Baseline and target technology architecture.
 - Platform and infrastructure models.
 - Technology standards.
@@ -168,10 +177,12 @@ Define the infrastructure needed to support applications.
 Identify solution options and major work packages.
 
 **Typical activities:**
+
 - Group changes into implementation projects.
 - Define solution building blocks.
 
 **Typical deliverables:**
+
 - Solution concepts.
 - Architecture roadmap (high level).
 - Work package definitions.
@@ -184,11 +195,13 @@ Identify solution options and major work packages.
 Plan how to move from baseline to target.
 
 **Typical activities:**
+
 - Prioritise projects.
 - Define transition architectures.
 - Assess risks.
 
 **Typical deliverables:**
+
 - Detailed migration roadmap.
 - Implementation and migration plan.
 - Risk and mitigation plan.
@@ -201,10 +214,12 @@ Plan how to move from baseline to target.
 Ensure implementations conform to the architecture.
 
 **Typical activities:**
+
 - Architecture compliance reviews.
 - Support projects during delivery.
 
 **Typical deliverables:**
+
 - Architecture contracts.
 - Compliance assessments.
 - Change requests.
@@ -217,11 +232,13 @@ Ensure implementations conform to the architecture.
 Manage evolution of the architecture over time.
 
 **Typical activities:**
+
 - Monitor drivers and change needs.
 - Assess impact of changes.
 - Trigger new ADM cycles.
 
 **Typical deliverables:**
+
 - Change management process.
 - Updated architecture versions.
 - Lessons learned.

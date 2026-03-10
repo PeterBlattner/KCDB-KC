@@ -1,0 +1,124 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' =========================
+' Core Classes (Ontology)
+' =========================
+
+class Comparison <<owl:Class>> {
+  + comparisonId : Identifier
+  + type : ComparisonType
+  + status : LifecycleStatus
+}
+
+class Measurand <<owl:Class>> {
+  + measurandId : Identifier
+  + quantityKind : URI
+  + unit : URI
+}
+
+class Participant <<owl:Class>> {
+  + participantId : Identifier
+  + organisation : URI
+}
+
+class ReportedResult <<owl:Class>> {
+  + resultId : Identifier
+  + value : Value
+}
+
+class ReferenceValue <<owl:Class>> {
+  + refValueId : Identifier
+  + value : Value
+}
+
+class DegreeOfEquivalence <<owl:Class>> {
+  + doeId : Identifier
+  + delta : Value
+}
+
+class UncertaintyStatement <<owl:Class>> {
+  + uncertaintyId : Identifier
+  + kind : UncertaintyKind  'standard|expanded|other
+  + numericValue : number
+  + unit : URI
+  + coverageProbability : number  'optional
+  + coverageFactorK : number      'optional
+  + distribution : DistributionKind 'optional
+}
+
+class DoEMethod <<owl:Class>> {
+  + methodId : Identifier
+  + name : string
+  + reference : URI
+}
+
+class CorrelationModel <<owl:Class>> {
+  + corrId : Identifier
+  + corrKind : CorrelationKind  'none|pairwise|matrix|assumed
+}
+
+class ParameterContext <<owl:Class>> {
+  + contextId : Identifier
+  + parameterName : URI
+  + parameterUnit : URI
+  + parameterValue : Value
+}
+
+class ProvenanceRecord <<owl:Class>> {
+  + provId : Identifier
+  + timestamp : dateTime
+  + agent : URI
+  + source : URI
+  + version : string
+}
+
+class CMCClaim <<owl:Class>> {
+  + cmcId : Identifier
+}
+
+class EvidenceLink <<owl:Class>> {
+  + evidenceId : Identifier
+  + rationale : string
+  + mappingType : MappingType 'exact|partial|derived
+}
+
+' =========================
+' Key Relations (Object Properties)
+' =========================
+
+Comparison "1" o-- "1..*" Measurand : hasMeasurand
+Comparison "1" o-- "1..*" Participant : hasParticipant
+
+Participant "1" o-- "0..*" ReportedResult : reports
+ReportedResult "1" --> "1" Measurand : forMeasurand
+ReportedResult "0..1" --> "1" UncertaintyStatement : hasUncertainty
+ReportedResult "0..1" --> "0..1" ParameterContext : inContext
+ReportedResult "0..1" --> "0..1" ProvenanceRecord : hasProvenance
+
+Comparison "1" o-- "0..*" ReferenceValue : hasReferenceValue
+ReferenceValue "1" --> "1" Measurand : forMeasurand
+ReferenceValue "0..1" --> "1" UncertaintyStatement : hasUncertainty
+ReferenceValue "0..1" --> "0..1" CorrelationModel : usesCorrelationModel
+ReferenceValue "0..1" --> "0..1" DoEMethod : computedBy
+ReferenceValue "0..1" --> "0..1" ProvenanceRecord : hasProvenance
+
+Comparison "1" o-- "0..*" DegreeOfEquivalence : hasDoE
+DegreeOfEquivalence "1" --> "1" Participant : forParticipant
+DegreeOfEquivalence "1" --> "1" Measurand : forMeasurand
+DegreeOfEquivalence "1" --> "1" ReferenceValue : relativeTo
+DegreeOfEquivalence "0..1" --> "1" UncertaintyStatement : hasUncertainty
+DegreeOfEquivalence "0..1" --> "0..1" DoEMethod : computedBy
+DegreeOfEquivalence "0..1" --> "0..1" ParameterContext : inContext
+DegreeOfEquivalence "0..1" --> "0..1" ProvenanceRecord : hasProvenance
+
+' =========================
+' Evidence model for KC/SC ↔ CMC linkage
+' =========================
+
+Comparison "0..*" --> "0..*" CMCClaim : supports
+EvidenceLink "1" --> "1" Comparison : evidenceFrom
+EvidenceLink "1" --> "1" CMCClaim : supportsClaim
+EvidenceLink "0..*" --> "0..*" Measurand : mapsMeasurand
+
+@enduml

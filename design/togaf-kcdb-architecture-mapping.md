@@ -19,6 +19,8 @@ The KCDB Reference Data Architecture initiative establishes a **canonical,
 machine-readable information architecture** for reporting 
 comparison (KC/SC) results and for enabling **systematic validation of CMC claims**
 based on Degrees of Equivalence (DoE). What is being designed is not merely a new exchange format, but a sustainable
+---
+
 **cross-domain architecture capability** that:
 
 - harmonises highly diverse reporting practices across Consultative Committees,
@@ -73,7 +75,7 @@ This is therefore the design of a:
   - Provenance and traceability by design.
   - Backward compatibility and controlled evolution.
   - Open standards and sustainability.
-
+---
 **Deliverables:**
 
 - Architecture charter.  
